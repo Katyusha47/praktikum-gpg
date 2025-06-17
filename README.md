@@ -47,6 +47,7 @@ gpg -a --export-secret-keys >myprivatekeys.asc
 
 Setelah melakukan export private keys, kalian akan diminta untuk memasukkan passphrase seperti gambar dibawah:
 <img src="export passwd.png" width="700">
+
 Jika muncul seperti digambar, maka masukkan password "123" seperti yang sudah dibuat sebelumnya.
 
 Setelah itu, export gpg trustdb ke text file dengan cara:
