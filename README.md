@@ -26,10 +26,11 @@ Setelah itu klik OK. Lalu, jika muncul message warning seperti gambar dibawah, p
 
 <img src="gpg gen key 4.png" width="600">
 
-Jika sudah selesai, maka akan muncul seperti gambar dibawah (SCREENSHOT HASILNYA):
+Jika sudah selesai, maka akan muncul seperti gambar dibawah:
 
 <img src="gpg gen key 5 (final).png" width="600">
 
+Note: Screenshot hasilnya
 
 
 ## Export public & private gpg keys
@@ -55,9 +56,10 @@ Setelah itu, export gpg trustdb ke text file dengan cara:
 gpg --export-ownertrust >otrust.txt
 ```
 
-Jika sudah, hasilnya akan seperti gambar dibawah (SCREENSHOT HASILNYA).
+Jika sudah, hasilnya akan seperti gambar dibawah.
 <img src="export gpg.png" width="600">
 
+Note: Screenshot hasilnya
 
 ### Import
 Selanjutnya adalah melakukan import gpg keys. Caranya pertama import terlebih dahulu private keysnya seperti berikut:
@@ -76,3 +78,22 @@ Lalu kita cek kedua key ini apakah ada idalam trustdb yang sudah kita export seb
 ```bash
 gpg -K
 ```
+<img src="gpg -K.png" width="600">
+
+Note: Screenshot hasilnya
+
+Selanjutnya kita cek informasi yang ada di dalam keys tersebut dengan cara:
+```bash
+gpg -k
+```
+<img src="gpg -k(lower).png" width="600">
+
+Note: Screenshot hasilnya
+
+Jika sudah muncul semua, sekarang kalian import trustdb nya dengan cara:
+```bash
+gpg --import-ownertrust otrust.txt
+```
+<img src="import otrust.png" width="600">
+
+Note: Screenshot hasilnya
