@@ -29,3 +29,30 @@ Setelah itu klik OK. Lalu, jika muncul message warning seperti gambar dibawah, p
 Jika sudah selesai, maka akan muncul seperti gambar dibawah (SCREENSHOT HASILNYA):
 
 <img src="gpg gen key 5 (final).png" width="600">
+
+
+
+## Export public & private gpg keys
+Setelah melakukan instalasi dan setup gpg, langkah selanjutnya adalah melakukan export dan import public dan private keys.
+
+### Export
+Untuk melakukan export ikuti langkah langkah dibawah:
+```bash
+# Pertama, ketik command dibawah ini untuk meng export public keys
+gpg -a --export >mypubkeys.asc
+
+# Selanjutnya, ketik command berikut untuk meng export private keys
+gpg -a --export-secret-keys >myprivatekeys.asc
+```
+
+Setelah melakukan export private keys, kalian akan diminta untuk memasukkan passphrase seperti gambar dibawah:
+<img src="export passwd.png" width="700">
+Jika muncul seperti digambar, maka masukkan password "123" seperti yang sudah dibuat sebelumnya.
+
+Setelah itu, export gpg trustdb ke text file dengan cara:
+```bash
+gpg --export-ownertrust >otrust.txt
+```
+
+Jika sudah, hasilnya akan seperti gambar dibawah (SCREENSHOT HASILNYA).
+<img src="export gpg.png" width="600">
