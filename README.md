@@ -57,3 +57,22 @@ gpg --export-ownertrust >otrust.txt
 
 Jika sudah, hasilnya akan seperti gambar dibawah (SCREENSHOT HASILNYA).
 <img src="export gpg.png" width="600">
+
+
+### Import
+Selanjutnya adalah melakukan import gpg keys. Caranya pertama import terlebih dahulu private keysnya seperti berikut:
+```bash
+gpg --import myprivatekeys.asc
+```
+<img src="import private.png" width="600">
+
+Setelah muncul informasi private keysnya, import public keys dengan cara:
+```bash
+gpg --import mypubkeys.asc
+```
+<img src="import public.png" width="600">
+
+Lalu kita cek kedua key ini apakah ada idalam trustdb yang sudah kita export sebelumnya. Caranya adalah:
+```bash
+gpg -K
+```
